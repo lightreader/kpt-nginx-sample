@@ -9,25 +9,25 @@ upstream:
   git:
     repo: https://github.com/GoogleContainerTools/kpt
     directory: /package-examples/nginx
-    ref: v0.9
+    ref: v0.10
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
     repo: https://github.com/GoogleContainerTools/kpt
     directory: /package-examples/nginx
-    ref: package-examples/nginx/v0.9
-    commit: b9ea0bca019dafa9f9f91fd428385597c708518c
+    ref: package-examples/nginx/v0.10
+    commit: d6353339f0380a4af1754ce9fbeb5146f8befe75
 info:
   emails:
     - kpt-team@google.com
   description: This is an example nginx package.
 pipeline:
-  validators:
-    - image: gcr.io/kpt-fn/kubeval:v0.3
-      configMap:
-        strict: "true"
   mutators:
     - image: gcr.io/kpt-fn/set-labels:v0.1
       configMap:
         env: dev
+  validators:
+    - image: gcr.io/kpt-fn/kubeval:v0.3
+      configMap:
+        strict: "true"

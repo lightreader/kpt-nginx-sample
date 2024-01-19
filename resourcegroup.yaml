@@ -1,7 +1,9 @@
 apiVersion: kpt.dev/v1alpha1
 kind: ResourceGroup
-metadata:
+metadata: # kpt-merge: default/inventory-36433191
   name: inventory-36433191
   namespace: default
   labels:
     cli-utils.sigs.k8s.io/inventory-id: 646a0ef88fba1dc6da8783a31c9be51bb4c3583e-1705629865598252947
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|ResourceGroup|default|inventory-36433191'
