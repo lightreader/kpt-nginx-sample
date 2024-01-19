@@ -60,3 +60,8 @@ git log
 kpt live destroy
 git status
 ```
+
+```
+git remote add origin git@github.com:lightreader/kpt-nginx-sample.git
+git push -u origin master
+```
